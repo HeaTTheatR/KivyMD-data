@@ -6,7 +6,7 @@ The install-kivy-buildozer-dependencies.sh contains the complete list of the Bui
 
 1. Download the **install-kivy-buildozer-dependencies.sh** any way you like. E.g.
 
-    ```curl -LJ0 https://raw.githubusercontent.com/HeaTTheatR/KivyMD-data/master/install-kivy-buildozer-dependencies.sh```
+    ```curl -LJO https://raw.githubusercontent.com/HeaTTheatR/KivyMD-data/master/install-kivy-buildozer-dependencies.sh```
 
 2. Add execution permissions:
 
