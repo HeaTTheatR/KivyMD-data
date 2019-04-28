@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Install Python pip
 sudo apt-get install -y curl
 sudo apt-get install -y python3-distutils
