@@ -1,0 +1,23 @@
+:github_url: https://github.com/kivymd-components/sweetalert/blob/master/sweetalert/docs/sources/_extensions/__init__.py
+:orphan:
+
+_extensions
+===========
+
+.. py:module:: _extensions
+
+
+API - :mod:`_extensions`
+------------------------
+
+
+Submodules
+----------
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   _extensions.autoapi_sweetalert </unincluded/_extensions/autoapi_sweetalert/index>
+   _extensions.kivy_lexer </unincluded/_extensions/kivy_lexer/index>
+   _extensions.toctree_with_sort </unincluded/_extensions/toctree_with_sort/index>

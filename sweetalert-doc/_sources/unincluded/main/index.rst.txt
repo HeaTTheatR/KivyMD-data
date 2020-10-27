@@ -1,0 +1,130 @@
+:github_url: https://github.com/kivymd-components/sweetalert/blob/master/sweetalert/demo/main.py
+
+main
+====
+
+.. py:module:: main
+
+
+API - :mod:`main`
+-----------------
+
+.. data:: KV
+   :annotation: = 
+# Do not delete this imports.
+# These imports are needed to execute the command `exec(root.example_text)`
+#:import ast ast
+#:import requests requests
+#:import threading threading
+#:import Clock kivy.clock.Clock
+#:import MDRectangleFlatIconButton kivymd.uix.button.MDRectangleFlatIconButton
+#:import MDRaisedButton kivymd.uix.button.MDRaisedButton
+
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import Clipboard kivy.core.clipboard.Clipboard
+#:import PythonLexer pygments.lexers.python.PythonLexer
+#:import SweetAlert sweetalert.SweetAlert
+#:import toast kivymd.toast.toast
+
+
+<ItemPreview>
+    size_hint_y: None
+
+    RelativeLayout:
+
+        CodeInput:
+            lexer: PythonLexer()
+            style: "monokai"
+            background_color: app.theme_cls.bg_darkest
+            text: root.example_text
+            selection_color: app.selection_color
+
+        MDRectangleFlatButton:
+            text: "COPY TO BUFFER"
+            on_release:
+                Clipboard.copy(root.example_text)
+                toast("Copied to clipboard")
+
+    RelativeLayout:
+
+        FitImage:
+            source: root.path_to_preview_image
+
+        MDRectangleFlatButton:
+            text: "RUN EXAMPLE"
+            on_release: exec(root.example_text)
+
+
+ScrollView:
+
+    MDList:
+        id: box
+        padding: "4dp"
+        spacing: "4dp"
+
+
+   
+
+.. py:class:: ItemPreview(**kwargs)
+
+
+
+   Box layout class. See module documentation for more information.
+       
+
+   .. attribute:: example_text
+      
+
+      
+
+   .. attribute:: path_to_preview_image
+      
+
+      
+
+
+.. py:class:: Example(**kwargs)
+
+
+
+   Application class, see module documentation for more information.
+
+   :Events:
+       `on_start`:
+           Fired when the application is being started (before the
+           :func:`~kivy.base.runTouchApp` call.
+       `on_stop`:
+           Fired when the application stops.
+       `on_pause`:
+           Fired when the application is paused by the OS.
+       `on_resume`:
+           Fired when the application is resumed from pause by the OS. Beware:
+           you have no guarantee that this event will be fired after the
+           `on_pause` event has been called.
+
+   .. versionchanged:: 1.7.0
+       Parameter `kv_file` added.
+
+   .. versionchanged:: 1.8.0
+       Parameters `kv_file` and `kv_directory` are now properties of App.
+
+   .. method:: build(self)
+
+      Initializes the application; it will be called only once.
+      If this method returns a widget (tree), it will be used as the root
+      widget and added to the window.
+
+      :return:
+          None or a root :class:`~kivy.uix.widget.Widget` instance
+          if no self.root exists.
+
+
+   .. method:: on_start(self)
+
+      Event handler for the `on_start` event which is fired after
+      initialization (after build() has been called) but before the
+      application has started running.
+
+
+
+

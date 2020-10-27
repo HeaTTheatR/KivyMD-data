@@ -1,0 +1,39 @@
+:github_url: https://github.com/kivymd-components/sweetalert/blob/master/sweetalert/docs/sources/_extensions/autoapi_sweetalert.py
+
+Monkey patching for AutoAPI Sphinx module.
+==========================================
+
+.. py:module:: _extensions.autoapi_sweetalert
+
+.. autoapi-nested-parse::
+
+   Monkey patching for AutoAPI Sphinx module.
+
+   Arrange .rst files by their summaries. Write path in the first line of docstring
+   to add .rst file. For example, "Classes/My Cool Class" will be placed in
+   "/classes/my-cool-class/index.rst".
+
+   It patches :func:`autoapi.mappers.python.objects.PythonPythonMapper.include_dir`,
+   :func:`autoapi.mappers.python.objects.PythonPythonMapper.pathname`,
+   :func:`autoapi.mappers.python.mapper.PythonSphinxMapper.output_rst`.
+
+
+API - :mod:`_extensions.autoapi_sweetalert`
+-------------------------------------------
+
+.. function:: PythonPythonMapper_include_dir(self: PythonPythonMapper, root)
+
+
+.. function:: PythonPythonMapper_pathname(self: PythonPythonMapper)
+
+
+.. function:: PythonSphinxMapper_output_rst(self: PythonSphinxMapper, root, source_suffix)
+
+
+.. function:: extension_build_finished(app, exception)
+
+
+.. function:: setup(app)
+
+
+

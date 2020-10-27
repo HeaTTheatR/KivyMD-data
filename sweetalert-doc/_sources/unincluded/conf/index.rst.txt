@@ -1,0 +1,167 @@
+:github_url: https://github.com/kivymd-components/sweetalert/blob/master/sweetalert/docs/sources/conf.py
+
+conf
+====
+
+.. py:module:: conf
+
+
+API - :mod:`conf`
+-----------------
+
+.. data:: project
+   :annotation: = Sweet Alert
+
+   
+
+.. data:: copyright
+   :annotation: = Copyright (c) 2020 KivyMD Team
+
+   
+
+.. data:: author
+   :annotation: = KivyMD Team
+
+   
+
+.. data:: version
+   
+
+   
+
+.. data:: release
+   
+
+   
+
+.. data:: master_doc
+   :annotation: = index
+
+   
+
+.. data:: exclude_patterns
+   :annotation: = []
+
+   
+
+.. data:: templates_path
+   :annotation: = ['_templates']
+
+   
+
+.. data:: locale_dirs
+   :annotation: = ['_locales']
+
+   
+
+.. data:: language
+   :annotation: = Python
+
+   
+
+.. data:: html_theme
+   :annotation: = sphinx_rtd_theme
+
+   
+
+.. data:: html_static_path
+   :annotation: = ['_static']
+
+   
+
+.. data:: html_favicon
+   :annotation: = _static/logo-kivymd.png
+
+   
+
+.. data:: html_logo
+   :annotation: = _static/logo-kivymd.png
+
+   
+
+.. data:: html_theme_options
+   
+
+   
+
+.. data:: extensions
+   :annotation: = ['sphinx.ext.autodoc', 'autoapi_sweetalert', 'sphinx.ext.intersphinx', 'kivy_lexer', 'toctree_with_sort']
+
+   
+
+.. data:: autoapi_dirs
+   
+
+   
+
+.. data:: autoapi_template_dir
+   
+
+   
+
+.. data:: autoapi_ignore
+   :annotation: = []
+
+   
+
+.. data:: autoapi_type
+   :annotation: = python
+
+   
+
+.. data:: autoapi_file_patterns
+   :annotation: = ['*.py']
+
+   
+
+.. data:: autoapi_generate_api_docs
+   :annotation: = True
+
+   
+
+.. data:: autoapi_options
+   :annotation: = ['members', 'undoc-members']
+
+   
+
+.. data:: autoapi_root
+   :annotation: = api
+
+   
+
+.. data:: autoapi_add_toctree_entry
+   :annotation: = False
+
+   
+
+.. data:: autoapi_include_inheritance_graphs
+   :annotation: = False
+
+   
+
+.. data:: show_module_summary
+   :annotation: = True
+
+   
+
+.. data:: autoapi_python_class_content
+   :annotation: = class
+
+   
+
+.. data:: autoapi_python_use_implicit_namespaces
+   :annotation: = False
+
+   
+
+.. data:: autoapi_keep_files
+   :annotation: = False
+
+   
+
+.. data:: intersphinx_mapping
+   
+
+   
+
+

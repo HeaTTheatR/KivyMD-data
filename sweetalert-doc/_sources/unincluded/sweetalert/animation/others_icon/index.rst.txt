@@ -1,0 +1,36 @@
+:github_url: https://github.com/kivymd-components/sweetalert/blob/master/sweetalert/animation/others_icon.py
+
+sweetalert.animation.others_icon
+================================
+
+.. py:module:: sweetalert.animation.others_icon
+
+
+API - :mod:`sweetalert.animation.others_icon`
+---------------------------------------------
+
+.. py:class:: OthersAnimation(**kwargs)
+
+
+
+   Float layout class. See module documentation for more information.
+       
+
+   .. attribute:: char
+      
+
+      
+
+   .. attribute:: color
+      
+
+      
+
+   .. method:: on_color(self, instance, value)
+
+
+   .. method:: on_char(self, instance, value)
+
+
+
+

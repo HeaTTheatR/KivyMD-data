@@ -1,0 +1,27 @@
+:github_url: https://github.com/kivymd-components/sweetalert/blob/master/sweetalert/__init__.py
+
+sweetalert
+==========
+
+.. py:module:: sweetalert
+
+
+API - :mod:`sweetalert`
+-----------------------
+
+
+Submodules
+----------
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   sweetalert.setup </unincluded/sweetalert/setup/index>
+   sweetalert.sweetalert </unincluded/sweetalert/sweetalert/index>
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   sweetalert.animation </unincluded/sweetalert/animation/index>

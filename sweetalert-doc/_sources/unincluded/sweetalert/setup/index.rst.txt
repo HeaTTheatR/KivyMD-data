@@ -1,0 +1,12 @@
+:github_url: https://github.com/kivymd-components/sweetalert/blob/master/sweetalert/setup.py
+
+sweetalert.setup
+================
+
+.. py:module:: sweetalert.setup
+
+
+API - :mod:`sweetalert.setup`
+-----------------------------
+
+

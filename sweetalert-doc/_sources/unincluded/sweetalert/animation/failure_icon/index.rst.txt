@@ -1,0 +1,23 @@
+:github_url: https://github.com/kivymd-components/sweetalert/blob/master/sweetalert/animation/failure_icon.py
+
+sweetalert.animation.failure_icon
+=================================
+
+.. py:module:: sweetalert.animation.failure_icon
+
+
+API - :mod:`sweetalert.animation.failure_icon`
+----------------------------------------------
+
+.. py:class:: FailureAnimation(**kwargs)
+
+
+
+   Float layout class. See module documentation for more information.
+       
+
+   .. method:: play(self)
+
+
+
+

@@ -1,0 +1,22 @@
+:github_url: https://github.com/kivymd-components/sweetalert/blob/master/sweetalert/animation/__init__.py
+
+sweetalert.animation
+====================
+
+.. py:module:: sweetalert.animation
+
+
+API - :mod:`sweetalert.animation`
+---------------------------------
+
+
+Submodules
+----------
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   sweetalert.animation.failure_icon </unincluded/sweetalert/animation/failure_icon/index>
+   sweetalert.animation.others_icon </unincluded/sweetalert/animation/others_icon/index>
+   sweetalert.animation.success_icon </unincluded/sweetalert/animation/success_icon/index>

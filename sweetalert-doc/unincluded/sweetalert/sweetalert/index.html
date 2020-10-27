@@ -1,0 +1,650 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="Python" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API &mdash; Sweet Alert 0.1.2 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/logo-kivymd.png"/>
+  
+  
+  
+    <link rel="canonical" href="https://sweetalert.readthedocs.io/en/latest/unincluded/sweetalert/sweetalert/index.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="sweetalert.animation" href="../animation/index.html" />
+    <link rel="prev" title="sweetalert.setup" href="../setup/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> Sweet Alert
+          
+
+          
+            
+            <img src="../../../_static/logo-kivymd.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">sweetalert</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#api-sweetalert">API - <code class="xref py py-mod docutils literal notranslate"><span class="pre">sweetalert</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#submodules">Submodules</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Sweet Alert</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">sweetalert</a> &raquo;</li>
+        
+      <li>API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <!-- User defined GitHub URL -->
+              <a href="https://github.com/kivymd-components/sweetalert/blob/master/sweetalert/sweetalert.py" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-sweetalert.sweetalert">
+<span id="api"></span><h1>API<a class="headerlink" href="#module-sweetalert.sweetalert" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<div class="section" id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">kivy.lang</span> <span class="kn">import</span> <span class="n">Builder</span>
+
+<span class="kn">from</span> <span class="nn">kivymd.app</span> <span class="kn">import</span> <span class="n">MDApp</span>
+
+<span class="n">KV</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">#:import SweetAlert kivymd.components.sweetalert.SweetAlert</span>
+
+
+<span class="s1">MDScreen:</span>
+
+<span class="s1">    MDRaisedButton:</span>
+<span class="s1">        text: &quot;EXAMPLE&quot;</span>
+<span class="s1">        pos_hint: {&quot;center_x&quot;: .5, &quot;center_y&quot;: .5}</span>
+<span class="s1">        on_release: SweetAlert(window_control_buttons=&quot;mac-style&quot;).fire(&quot;Message!&quot;)</span>
+<span class="s1">&#39;&#39;&#39;</span>
+
+
+<span class="k">class</span> <span class="nc">Test</span><span class="p">(</span><span class="n">MDApp</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Builder</span><span class="o">.</span><span class="n">load_string</span><span class="p">(</span><span class="n">KV</span><span class="p">)</span>
+
+
+<span class="n">Test</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/preview-sweet-alert-example.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/preview-sweet-alert-example.png" />
+</div>
+</div>
+<div class="section" id="api-sweetalert-sweetalert">
+<h2>API - <a class="reference internal" href="#module-sweetalert.sweetalert" title="sweetalert.sweetalert"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sweetalert.sweetalert</span></code></a><a class="headerlink" href="#api-sweetalert-sweetalert" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="sweetalert.sweetalert.SweetAlert">
+<em class="property">class </em><code class="sig-prename descclassname">sweetalert.sweetalert.</code><code class="sig-name descname">SweetAlert</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert" title="Permalink to this definition">¶</a></dt>
+<dd><p>ModalView class. See module documentation for more information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Events</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>on_pre_open</cite>:</dt><dd><p>Fired before the ModalView is opened. When this event is fired
+ModalView is not yet added to window.</p>
+</dd>
+<dt><cite>on_open</cite>:</dt><dd><p>Fired when the ModalView is opened.</p>
+</dd>
+<dt><cite>on_pre_dismiss</cite>:</dt><dd><p>Fired before the ModalView is closed.</p>
+</dd>
+<dt><cite>on_dismiss</cite>:</dt><dd><p>Fired when the ModalView is closed. If the callback returns True,
+the dismiss will be canceled.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.11.0: </span>Added events <cite>on_pre_open</cite> and <cite>on_pre_dismiss</cite>.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.0.0: </span>Added property 'overlay_color'.</p>
+</div>
+<dl class="py attribute">
+<dt id="sweetalert.sweetalert.SweetAlert.animation_type">
+<code class="sig-name descname">animation_type</code><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.animation_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dialog appearance animation type. Available options are: <cite>'pulse'</cite>.</p>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-anim-pulse.gif" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-anim-pulse.gif" />
+<p><a class="reference internal" href="#sweetalert.sweetalert.SweetAlert.animation_type" title="sweetalert.sweetalert.SweetAlert.animation_type"><code class="xref py py-attr docutils literal notranslate"><span class="pre">animation_type</span></code></a> is an <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.properties.html#kivy.properties.OptionProperty" title="(in Kivy v1.11.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OptionProperty</span></code></a>
+and defaults to <cite>'pulse'</cite>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sweetalert.sweetalert.SweetAlert.font_style_title">
+<code class="sig-name descname">font_style_title</code><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.font_style_title" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dialog title style.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">(</span>
+    <span class="n">window_control_buttons</span><span class="o">=</span><span class="s2">&quot;mac-style&quot;</span><span class="p">,</span>
+    <span class="n">font_style_title</span><span class="o">=</span><span class="s2">&quot;H4&quot;</span><span class="p">,</span>
+<span class="p">)</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="s2">&quot;Title&quot;</span><span class="p">,</span> <span class="s2">&quot;Message!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-title-style.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-title-style.png" />
+<p><a class="reference internal" href="#sweetalert.sweetalert.SweetAlert.font_style_title" title="sweetalert.sweetalert.SweetAlert.font_style_title"><code class="xref py py-attr docutils literal notranslate"><span class="pre">font_style_title</span></code></a> is an <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.properties.html#kivy.properties.OptionProperty" title="(in Kivy v1.11.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OptionProperty</span></code></a>
+and defaults to attr:<cite>~kivymd.font_definitions.theme_font_styles</cite></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sweetalert.sweetalert.SweetAlert.font_style_text">
+<code class="sig-name descname">font_style_text</code><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.font_style_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dialog text style.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">(</span>
+    <span class="n">window_control_buttons</span><span class="o">=</span><span class="s2">&quot;mac-style&quot;</span><span class="p">,</span>
+    <span class="n">font_style_text</span><span class="o">=</span><span class="s2">&quot;H4&quot;</span><span class="p">,</span>
+<span class="p">)</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="s2">&quot;Title&quot;</span><span class="p">,</span> <span class="s2">&quot;Message!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-text-style.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-text-style.png" />
+<p><a class="reference internal" href="#sweetalert.sweetalert.SweetAlert.font_style_text" title="sweetalert.sweetalert.SweetAlert.font_style_text"><code class="xref py py-attr docutils literal notranslate"><span class="pre">font_style_text</span></code></a> is an <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.properties.html#kivy.properties.OptionProperty" title="(in Kivy v1.11.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OptionProperty</span></code></a>
+and defaults to attr:<cite>~kivymd.font_definitions.theme_font_styles</cite></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sweetalert.sweetalert.SweetAlert.font_style_footer">
+<code class="sig-name descname">font_style_footer</code><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.font_style_footer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dialog footer style.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">(</span>
+    <span class="n">window_control_buttons</span><span class="o">=</span><span class="s2">&quot;mac-style&quot;</span><span class="p">,</span>
+    <span class="n">font_style_footer</span><span class="o">=</span><span class="s2">&quot;H4&quot;</span><span class="p">,</span>
+<span class="p">)</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="s2">&quot;Title&quot;</span><span class="p">,</span> <span class="s2">&quot;Message!&quot;</span><span class="p">,</span> <span class="s2">&quot;Footer&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-text-footer.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-text-footer.png" />
+<p><a class="reference internal" href="#sweetalert.sweetalert.SweetAlert.font_style_footer" title="sweetalert.sweetalert.SweetAlert.font_style_footer"><code class="xref py py-attr docutils literal notranslate"><span class="pre">font_style_footer</span></code></a> is an <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.properties.html#kivy.properties.OptionProperty" title="(in Kivy v1.11.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OptionProperty</span></code></a>
+and defaults to attr:<cite>~kivymd.font_definitions.theme_font_styles</cite></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sweetalert.sweetalert.SweetAlert.font_size_button">
+<code class="sig-name descname">font_size_button</code><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.font_size_button" title="Permalink to this definition">¶</a></dt>
+<dd><p>Button font size.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">(</span>
+    <span class="n">window_control_buttons</span><span class="o">=</span><span class="s2">&quot;mac-style&quot;</span><span class="p">,</span>
+    <span class="n">font_size_button</span><span class="o">=</span><span class="s2">&quot;24sp&quot;</span><span class="p">,</span>
+<span class="p">)</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="s2">&quot;Message!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-size-button.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-size-button.png" />
+<p><a class="reference internal" href="#sweetalert.sweetalert.SweetAlert.font_size_button" title="sweetalert.sweetalert.SweetAlert.font_size_button"><code class="xref py py-attr docutils literal notranslate"><span class="pre">font_size_button</span></code></a> is an <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.properties.html#kivy.properties.NumericProperty" title="(in Kivy v1.11.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">NumericProperty</span></code></a>
+and defaults to <cite>'16sp'</cite>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sweetalert.sweetalert.SweetAlert.color_button">
+<code class="sig-name descname">color_button</code><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.color_button" title="Permalink to this definition">¶</a></dt>
+<dd><p>Button color.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">(</span>
+    <span class="n">window_control_buttons</span><span class="o">=</span><span class="s2">&quot;mac-style&quot;</span><span class="p">,</span>
+    <span class="n">color_button</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="s2">&quot;Message!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-color-button.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-color-button.png" />
+<p><a class="reference internal" href="#sweetalert.sweetalert.SweetAlert.color_button" title="sweetalert.sweetalert.SweetAlert.color_button"><code class="xref py py-attr docutils literal notranslate"><span class="pre">color_button</span></code></a> is an <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.properties.html#kivy.properties.ListProperty" title="(in Kivy v1.11.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ListProperty</span></code></a>
+and defaults to <cite>[]</cite>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sweetalert.sweetalert.SweetAlert.text_color_button">
+<code class="sig-name descname">text_color_button</code><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.text_color_button" title="Permalink to this definition">¶</a></dt>
+<dd><p>Button text color.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">(</span>
+    <span class="n">window_control_buttons</span><span class="o">=</span><span class="s2">&quot;mac-style&quot;</span><span class="p">,</span>
+    <span class="n">text_color_button</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="s2">&quot;Message!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-text-color-button.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-text-color-button.png" />
+<p><a class="reference internal" href="#sweetalert.sweetalert.SweetAlert.text_color_button" title="sweetalert.sweetalert.SweetAlert.text_color_button"><code class="xref py py-attr docutils literal notranslate"><span class="pre">text_color_button</span></code></a> is an <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.properties.html#kivy.properties.ListProperty" title="(in Kivy v1.11.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ListProperty</span></code></a>
+and defaults to <cite>[]</cite>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sweetalert.sweetalert.SweetAlert.position">
+<code class="sig-name descname">position</code><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dialog position. Available options are: <cite>'center'</cite>, <cite>'top-left'</cite>, <cite>'top-right'</cite>,
+<cite>'bottom-left'</cite>, <cite>'bottom-right'</cite>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">(</span>
+    <span class="n">window_control_buttons</span><span class="o">=</span><span class="s2">&quot;mac-style&quot;</span><span class="p">,</span>
+    <span class="n">position</span><span class="o">=</span><span class="s2">&quot;top-right&quot;</span><span class="p">,</span>
+<span class="p">)</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="s2">&quot;Message!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-top-right.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-top-right.png" />
+<p><a class="reference internal" href="#sweetalert.sweetalert.SweetAlert.position" title="sweetalert.sweetalert.SweetAlert.position"><code class="xref py py-attr docutils literal notranslate"><span class="pre">position</span></code></a> is an <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.properties.html#kivy.properties.OptionProperty" title="(in Kivy v1.11.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OptionProperty</span></code></a>
+and defaults to <cite>'center'</cite>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sweetalert.sweetalert.SweetAlert.window_control_buttons">
+<code class="sig-name descname">window_control_buttons</code><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.window_control_buttons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of buttons of window header.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">(</span><span class="n">window_control_buttons</span><span class="o">=</span><span class="s2">&quot;mac-style&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="s2">&quot;Message!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-window-control-buttons.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-window-control-buttons.png" />
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">(</span><span class="n">window_control_buttons</span><span class="o">=</span><span class="s2">&quot;close&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="s2">&quot;Message!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-close.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-close.png" />
+<p><a class="reference internal" href="#sweetalert.sweetalert.SweetAlert.window_control_buttons" title="sweetalert.sweetalert.SweetAlert.window_control_buttons"><code class="xref py py-attr docutils literal notranslate"><span class="pre">window_control_buttons</span></code></a> is an <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.properties.html#kivy.properties.OptionProperty" title="(in Kivy v1.11.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">OptionProperty</span></code></a>
+and defaults to <cite>None</cite>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sweetalert.sweetalert.SweetAlert.window_control_callback">
+<code class="sig-name descname">window_control_callback</code><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.window_control_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Callback for buttons of window header.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">(</span>
+    <span class="n">window_control_buttons</span><span class="o">=</span><span class="s2">&quot;close&quot;</span><span class="p">,</span>
+    <span class="n">window_control_callback</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">callback</span><span class="p">,</span>
+<span class="p">)</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="s2">&quot;Message!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance_button</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">instance_button</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="#sweetalert.sweetalert.SweetAlert.window_control_callback" title="sweetalert.sweetalert.SweetAlert.window_control_callback"><code class="xref py py-attr docutils literal notranslate"><span class="pre">window_control_callback</span></code></a> is an <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.properties.html#kivy.properties.ObjectProperty" title="(in Kivy v1.11.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectProperty</span></code></a>
+and defaults to <cite>None</cite>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sweetalert.sweetalert.SweetAlert.timer">
+<code class="sig-name descname">timer</code><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.timer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dialog closes automatically by timer.</p>
+<p><a class="reference internal" href="#sweetalert.sweetalert.SweetAlert.timer" title="sweetalert.sweetalert.SweetAlert.timer"><code class="xref py py-attr docutils literal notranslate"><span class="pre">timer</span></code></a> is an <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.properties.html#kivy.properties.NumericProperty" title="(in Kivy v1.11.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">NumericProperty</span></code></a>
+and defaults to <cite>0</cite>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sweetalert.sweetalert.SweetAlert.request">
+<code class="sig-name descname">request</code><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.request" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sweetalert.sweetalert.SweetAlert.fire">
+<code class="sig-name descname">fire</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">text</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">footer</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">image</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">height_image</span><span class="o">=</span><span class="default_value">'200dp'</span></em>, <em class="sig-param"><span class="n">input</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">buttons</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.fire" title="Permalink to this definition">¶</a></dt>
+<dd><p><cite>title</cite></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">()</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="s2">&quot;Title&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-title.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-title.png" />
+<p><cite>text</cite></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">()</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="s2">&quot;Title&quot;</span><span class="p">,</span> <span class="s2">&quot;Text)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-title-text.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-title-text.png" />
+<p>Or without title:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">()</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Text)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-text.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-text.png" />
+<p><cite>footer</cite></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">()</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Message&quot;</span><span class="p">,</span> <span class="n">footer</span><span class="o">=</span><span class="s2">&quot;Footer text&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-footer.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-footer.png" />
+<p><cite>image</cite></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">()</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Message&quot;</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="s2">&quot;https://picsum.photos/600/400/?blur&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-image.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-image.png" />
+<p><cite>input</cite></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">()</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Message&quot;</span><span class="p">,</span> <span class="nb">input</span><span class="o">=</span><span class="s2">&quot;Input Email&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-input.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-input.png" />
+<p>Or combine parameters:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">()</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span>
+    <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Message&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;https://picsum.photos/600/400/?blur&quot;</span><span class="p">,</span>
+    <span class="nb">input</span><span class="o">=</span><span class="s2">&quot;Input Email&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-combine.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-combine.png" />
+<p><cite>buttons</cite></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">kivy.lang</span> <span class="kn">import</span> <span class="n">Builder</span>
+
+<span class="kn">from</span> <span class="nn">kivymd.app</span> <span class="kn">import</span> <span class="n">MDApp</span>
+<span class="kn">from</span> <span class="nn">kivymd.uix.button</span> <span class="kn">import</span> <span class="n">MDRaisedButton</span><span class="p">,</span> <span class="n">MDFlatButton</span>
+
+<span class="kn">from</span> <span class="nn">kivymd.components.sweetalert</span> <span class="kn">import</span> <span class="n">SweetAlert</span>
+
+<span class="n">KV</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">MDScreen:</span>
+
+<span class="s1">    MDRaisedButton:</span>
+<span class="s1">        text: &quot;EXAMPLE&quot;</span>
+<span class="s1">        pos_hint: {&quot;center_x&quot;: .5, &quot;center_y&quot;: .5}</span>
+<span class="s1">        on_release: app.show_dialog()</span>
+<span class="s1">&#39;&#39;&#39;</span>
+
+
+<span class="k">class</span> <span class="nc">Test</span><span class="p">(</span><span class="n">MDApp</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Builder</span><span class="o">.</span><span class="n">load_string</span><span class="p">(</span><span class="n">KV</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">show_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">button_ok</span> <span class="o">=</span> <span class="n">MDRaisedButton</span><span class="p">(</span>
+            <span class="n">text</span><span class="o">=</span><span class="s1">&#39;OK&#39;</span><span class="p">,</span>
+            <span class="n">font_size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+            <span class="n">on_release</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">callback</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">button_cancel</span> <span class="o">=</span> <span class="n">MDFlatButton</span><span class="p">(</span>
+            <span class="n">text</span><span class="o">=</span><span class="s1">&#39;CANCEL&#39;</span><span class="p">,</span>
+            <span class="n">font_size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+            <span class="n">on_release</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">callback</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">alert</span> <span class="o">=</span> <span class="n">SweetAlert</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">alert</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span>
+            <span class="s1">&#39;Your public IP&#39;</span><span class="p">,</span> <span class="n">buttons</span><span class="o">=</span><span class="p">[</span><span class="n">button_ok</span><span class="p">,</span> <span class="n">button_cancel</span><span class="p">],</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance_button</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alert</span><span class="p">,</span> <span class="n">instance_button</span><span class="p">)</span>
+
+
+<span class="n">Test</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-buttons.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-buttons.png" />
+<p><cite>type</cite>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">success</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">()</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="s1">&#39;That thing is still around?&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;question&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-success.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-success.png" />
+<p><code class="docutils literal notranslate"><span class="pre">failure</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">()</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="s1">&#39;That thing is still around?&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;failure&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-failure.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-failure.png" />
+<p><code class="docutils literal notranslate"><span class="pre">warning</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">()</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="s1">&#39;That thing is still around?&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;warning&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-warning.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-warning.png" />
+<p><code class="docutils literal notranslate"><span class="pre">info</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">()</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="s1">&#39;That thing is still around?&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;info&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-info.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-info.png" />
+<p><code class="docutils literal notranslate"><span class="pre">question</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SweetAlert</span><span class="p">()</span><span class="o">.</span><span class="n">fire</span><span class="p">(</span><span class="s1">&#39;That thing is still around?&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;question&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-question.png" class="align-center" src="https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-question.png" />
+</dd></dl>
+
+<dl class="py method">
+<dt id="sweetalert.sweetalert.SweetAlert.update_width">
+<code class="sig-name descname">update_width</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.update_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates window width.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sweetalert.sweetalert.SweetAlert.on_request">
+<code class="sig-name descname">on_request</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">instance</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.on_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a <code class="docutils literal notranslate"><span class="pre">MDSpinner</span></code> to the dialog.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sweetalert.sweetalert.SweetAlert.add_input">
+<code class="sig-name descname">add_input</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">input</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.add_input" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sweetalert.sweetalert.SweetAlert.check_timer">
+<code class="sig-name descname">check_timer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">timer</span></em>, <em class="sig-param"><span class="n">interval</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.check_timer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sweetalert.sweetalert.SweetAlert.add_image">
+<code class="sig-name descname">add_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">image</span></em>, <em class="sig-param"><span class="n">height_image</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.add_image" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sweetalert.sweetalert.SweetAlert.add_footer">
+<code class="sig-name descname">add_footer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">footer</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.add_footer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sweetalert.sweetalert.SweetAlert.add_buttons">
+<code class="sig-name descname">add_buttons</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">buttons</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.add_buttons" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sweetalert.sweetalert.SweetAlert.add_text">
+<code class="sig-name descname">add_text</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.add_text" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sweetalert.sweetalert.SweetAlert.add_title">
+<code class="sig-name descname">add_title</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">title</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.add_title" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sweetalert.sweetalert.SweetAlert.add_icon">
+<code class="sig-name descname">add_icon</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">type</span></em>, <em class="sig-param"><span class="n">char</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">color</span><span class="o">=</span><span class="default_value">()</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.add_icon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sweetalert.sweetalert.SweetAlert.anim_open_dialog_pulse">
+<code class="sig-name descname">anim_open_dialog_pulse</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.anim_open_dialog_pulse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sweetalert.sweetalert.SweetAlert.anim_close_dialog_pulse">
+<code class="sig-name descname">anim_close_dialog_pulse</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sweetalert.sweetalert.SweetAlert.anim_close_dialog_pulse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="sweetalert.sweetalert.CustomLabel">
+<em class="property">class </em><code class="sig-prename descclassname">sweetalert.sweetalert.</code><code class="sig-name descname">CustomLabel</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sweetalert.sweetalert.CustomLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for dialog labels.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="sweetalert.sweetalert.MacOSWindowHeaderButton">
+<em class="property">class </em><code class="sig-prename descclassname">sweetalert.sweetalert.</code><code class="sig-name descname">MacOSWindowHeaderButton</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sweetalert.sweetalert.MacOSWindowHeaderButton" title="Permalink to this definition">¶</a></dt>
+<dd><p>The base class of buttons (close/collapse/expand) that will be placed
+in the window header.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../animation/index.html" class="btn btn-neutral float-right" title="sweetalert.animation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../setup/index.html" class="btn btn-neutral float-left" title="sweetalert.setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright Copyright (c) 2020 KivyMD Team
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

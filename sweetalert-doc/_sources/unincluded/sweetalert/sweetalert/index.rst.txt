@@ -1,0 +1,503 @@
+:github_url: https://github.com/kivymd-components/sweetalert/blob/master/sweetalert/sweetalert.py
+
+API
+===
+
+.. py:module:: sweetalert.sweetalert
+
+.. autoapi-nested-parse::
+
+   API
+   ===
+
+   Usage
+   -----
+
+   .. code-block:: python
+
+       from kivy.lang import Builder
+
+       from kivymd.app import MDApp
+
+       KV = '''
+       #:import SweetAlert kivymd.components.sweetalert.SweetAlert
+
+
+       MDScreen:
+
+           MDRaisedButton:
+               text: "EXAMPLE"
+               pos_hint: {"center_x": .5, "center_y": .5}
+               on_release: SweetAlert(window_control_buttons="mac-style").fire("Message!")
+       '''
+
+
+       class Test(MDApp):
+           def build(self):
+               return Builder.load_string(KV)
+
+
+       Test().run()
+
+   .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/preview-sweet-alert-example.png
+       :align: center
+
+
+API - :mod:`sweetalert.sweetalert`
+----------------------------------
+
+.. py:class:: SweetAlert(**kwargs)
+
+
+
+   ModalView class. See module documentation for more information.
+
+   :Events:
+       `on_pre_open`:
+           Fired before the ModalView is opened. When this event is fired
+           ModalView is not yet added to window.
+       `on_open`:
+           Fired when the ModalView is opened.
+       `on_pre_dismiss`:
+           Fired before the ModalView is closed.
+       `on_dismiss`:
+           Fired when the ModalView is closed. If the callback returns True,
+           the dismiss will be canceled.
+
+   .. versionchanged:: 1.11.0
+       Added events `on_pre_open` and `on_pre_dismiss`.
+
+   .. versionchanged:: 2.0.0
+       Added property 'overlay_color'.
+
+   .. attribute:: animation_type
+      
+
+      Dialog appearance animation type. Available options are: `'pulse'`.
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-anim-pulse.gif
+          :align: center
+
+      :attr:`animation_type` is an :class:`~kivy.properties.OptionProperty`
+      and defaults to `'pulse'`.
+
+
+   .. attribute:: font_style_title
+      
+
+      Dialog title style.
+
+      .. code-block:: python
+
+          SweetAlert(
+              window_control_buttons="mac-style",
+              font_style_title="H4",
+          ).fire("Title", "Message!")
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-title-style.png
+          :align: center
+
+      :attr:`font_style_title` is an :class:`~kivy.properties.OptionProperty`
+      and defaults to attr:`~kivymd.font_definitions.theme_font_styles`
+
+
+   .. attribute:: font_style_text
+      
+
+      Dialog text style.
+
+      .. code-block:: python
+
+          SweetAlert(
+              window_control_buttons="mac-style",
+              font_style_text="H4",
+          ).fire("Title", "Message!")
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-text-style.png
+          :align: center
+
+      :attr:`font_style_text` is an :class:`~kivy.properties.OptionProperty`
+      and defaults to attr:`~kivymd.font_definitions.theme_font_styles`
+
+
+   .. attribute:: font_style_footer
+      
+
+      Dialog footer style.
+
+      .. code-block:: python
+
+          SweetAlert(
+              window_control_buttons="mac-style",
+              font_style_footer="H4",
+          ).fire("Title", "Message!", "Footer")
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-text-footer.png
+          :align: center
+
+      :attr:`font_style_footer` is an :class:`~kivy.properties.OptionProperty`
+      and defaults to attr:`~kivymd.font_definitions.theme_font_styles`
+
+
+   .. attribute:: font_size_button
+      
+
+      Button font size.
+
+      .. code-block:: python
+
+          SweetAlert(
+              window_control_buttons="mac-style",
+              font_size_button="24sp",
+          ).fire("Message!")
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-size-button.png
+          :align: center
+
+      :attr:`font_size_button` is an :class:`~kivy.properties.NumericProperty`
+      and defaults to `'16sp'`.
+
+
+   .. attribute:: color_button
+      
+
+      Button color.
+
+      .. code-block:: python
+
+          SweetAlert(
+              window_control_buttons="mac-style",
+              color_button=(1, 0, 1, 1),
+          ).fire("Message!")
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-color-button.png
+          :align: center
+
+      :attr:`color_button` is an :class:`~kivy.properties.ListProperty`
+      and defaults to `[]`.
+
+
+   .. attribute:: text_color_button
+      
+
+      Button text color.
+
+      .. code-block:: python
+
+          SweetAlert(
+              window_control_buttons="mac-style",
+              text_color_button=(1, 0, 0, 1),
+          ).fire("Message!")
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-text-color-button.png
+          :align: center
+
+      :attr:`text_color_button` is an :class:`~kivy.properties.ListProperty`
+      and defaults to `[]`.
+
+
+   .. attribute:: position
+      
+
+      Dialog position. Available options are: `'center'`, `'top-left'`, `'top-right'`,
+      `'bottom-left'`, `'bottom-right'`.
+
+      .. code-block:: python
+
+          SweetAlert(
+              window_control_buttons="mac-style",
+              position="top-right",
+          ).fire("Message!")
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-top-right.png
+          :align: center
+
+      :attr:`position` is an :class:`~kivy.properties.OptionProperty`
+      and defaults to `'center'`.
+
+
+   .. attribute:: window_control_buttons
+      
+
+      Type of buttons of window header.
+
+      .. code-block:: python
+
+          SweetAlert(window_control_buttons="mac-style").fire("Message!")
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-window-control-buttons.png
+          :align: center
+
+      .. code-block:: python
+
+          SweetAlert(window_control_buttons="close").fire("Message!")
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-close.png
+          :align: center
+
+      :attr:`window_control_buttons` is an :class:`~kivy.properties.OptionProperty`
+      and defaults to `None`.
+
+
+   .. attribute:: window_control_callback
+      
+
+      Callback for buttons of window header.
+
+      .. code-block:: python
+
+          SweetAlert(
+              window_control_buttons="close",
+              window_control_callback=self.callback,
+          ).fire("Message!")
+
+      .. code-block:: python
+
+          def callback(self, instance_button):
+              print(instance_button)
+
+      :attr:`window_control_callback` is an :class:`~kivy.properties.ObjectProperty`
+      and defaults to `None`.
+
+
+   .. attribute:: timer
+      
+
+      Dialog closes automatically by timer.
+
+      :attr:`timer` is an :class:`~kivy.properties.NumericProperty`
+      and defaults to `0`.
+
+
+   .. attribute:: request
+      
+
+      
+
+   .. method:: fire(self, title='', text='', footer='', image='', height_image='200dp', input='', buttons=None, type='')
+
+      Arguments:
+      ----------
+
+      `title`
+
+      .. code-block:: python
+
+          SweetAlert().fire("Title")
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-title.png
+          :align: center
+
+      `text`
+
+      .. code-block:: python
+
+          SweetAlert().fire("Title", "Text)
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-title-text.png
+          :align: center
+
+      Or without title:
+
+      .. code-block:: python
+
+          SweetAlert().fire(text="Text)
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-text.png
+          :align: center
+
+      `footer`
+
+      .. code-block:: python
+
+          SweetAlert().fire(text="Message", footer="Footer text")
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-footer.png
+          :align: center
+
+      `image`
+
+      .. code-block:: python
+
+          SweetAlert().fire(text="Message", image="https://picsum.photos/600/400/?blur")
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-image.png
+          :align: center
+
+      `input`
+
+      .. code-block:: python
+
+          SweetAlert().fire(text="Message", input="Input Email")
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-input.png
+          :align: center
+
+      Or combine parameters:
+
+      .. code-block:: python
+
+          SweetAlert().fire(
+              text="Message",
+              image="https://picsum.photos/600/400/?blur",
+              input="Input Email",
+          )
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-combine.png
+          :align: center
+
+      `buttons`
+
+      .. code-block:: python
+
+          from kivy.lang import Builder
+
+          from kivymd.app import MDApp
+          from kivymd.uix.button import MDRaisedButton, MDFlatButton
+
+          from kivymd.components.sweetalert import SweetAlert
+
+          KV = '''
+          MDScreen:
+
+              MDRaisedButton:
+                  text: "EXAMPLE"
+                  pos_hint: {"center_x": .5, "center_y": .5}
+                  on_release: app.show_dialog()
+          '''
+
+
+          class Test(MDApp):
+              def build(self):
+                  return Builder.load_string(KV)
+
+              def show_dialog(self):
+                  button_ok = MDRaisedButton(
+                      text='OK',
+                      font_size=16,
+                      on_release=self.callback,
+                  )
+                  button_cancel = MDFlatButton(
+                      text='CANCEL',
+                      font_size=16,
+                      on_release=self.callback,
+                  )
+                  self.alert = SweetAlert()
+                  self.alert.fire(
+                      'Your public IP', buttons=[button_ok, button_cancel],
+                  )
+
+              def callback(self, instance_button):
+                  print(self.alert, instance_button)
+
+
+          Test().run()
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-buttons.png
+          :align: center
+
+      `type`:
+
+      ``success``
+
+      .. code-block:: python
+
+          SweetAlert().fire('That thing is still around?', type='question')
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-success.png
+          :align: center
+
+      ``failure``
+
+      .. code-block:: python
+
+          SweetAlert().fire('That thing is still around?', type='failure')
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-failure.png
+          :align: center
+
+      ``warning``
+
+      .. code-block:: python
+
+          SweetAlert().fire('That thing is still around?', type='warning')
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-warning.png
+          :align: center
+
+      ``info``
+
+      .. code-block:: python
+
+          SweetAlert().fire('That thing is still around?', type='info')
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-info.png
+          :align: center
+
+      ``question``
+
+      .. code-block:: python
+
+          SweetAlert().fire('That thing is still around?', type='question')
+
+      .. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/sweet-alert-question.png
+          :align: center
+
+
+   .. method:: update_width(self, *args)
+
+      Updates window width.
+
+
+   .. method:: on_request(self, instance, value)
+
+      Adds a ``MDSpinner`` to the dialog.
+
+
+   .. method:: add_input(self, input)
+
+
+   .. method:: check_timer(self, timer, interval=1)
+
+
+   .. method:: add_image(self, image, height_image)
+
+
+   .. method:: add_footer(self, footer)
+
+
+   .. method:: add_buttons(self, buttons)
+
+
+   .. method:: add_text(self, text)
+
+
+   .. method:: add_title(self, title)
+
+
+   .. method:: add_icon(self, type, char='', color=())
+
+
+   .. method:: anim_open_dialog_pulse(self, *args)
+
+
+   .. method:: anim_close_dialog_pulse(self, *args)
+
+
+
+.. py:class:: CustomLabel(**kwargs)
+
+
+
+   Base class for dialog labels.
+
+
+.. py:class:: MacOSWindowHeaderButton(**kwargs)
+
+
+
+   The base class of buttons (close/collapse/expand) that will be placed
+   in the window header.
+
+
+

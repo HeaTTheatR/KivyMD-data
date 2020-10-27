@@ -1,0 +1,15 @@
+:github_url: https://github.com/kivymd-components/sweetalert/blob/master/sweetalert/docs/sources/_extensions/kivy_lexer.py
+
+_extensions.kivy_lexer
+======================
+
+.. py:module:: _extensions.kivy_lexer
+
+
+API - :mod:`_extensions.kivy_lexer`
+-----------------------------------
+
+.. function:: setup(app)
+
+
+

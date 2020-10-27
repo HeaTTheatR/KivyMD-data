@@ -1,0 +1,31 @@
+:github_url: https://github.com/kivymd-components/sweetalert/blob/master/sweetalert/docs/sources/_extensions/toctree_with_sort.py
+
+_extensions.toctree_with_sort
+=============================
+
+.. py:module:: _extensions.toctree_with_sort
+
+
+API - :mod:`_extensions.toctree_with_sort`
+------------------------------------------
+
+.. py:class:: TocTreeWithSort(name, arguments, options, content, lineno, content_offset, block_text, state, state_machine)
+
+
+
+   Directive to notify Sphinx about the hierarchical structure of the docs,
+   and to include a table-of-contents like tree in the current document.
+
+   .. attribute:: option_spec
+      
+
+      
+
+   .. method:: parse_content(self, toctree)
+
+
+
+.. function:: setup(app)
+
+
+
