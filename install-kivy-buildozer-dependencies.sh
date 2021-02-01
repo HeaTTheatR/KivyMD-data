@@ -27,8 +27,8 @@ if [ -e /usr/bin/apt ]; then
     	zlib1g-dev
 elif [ -e /usr/bin/pacman ]; then
 	sudo pacman -Syu #make sure repos are up to date and no partial upgrades occur 
-	sudo pacman -S --no-confirm curl python-distutils-extra python-pip
-	sudo pacman -S --no-confirm base-devel python ffmpeg sdl2 sdl2_image sdl2_mixer sdl2_ttf portmidi zlib
+	sudo pacman -S --noconfirm curl python-distutils-extra python-pip
+	sudo pacman -S --noconfirm base-devel python ffmpeg sdl2 sdl2_image sdl2_mixer sdl2_ttf portmidi zlib
 else
 	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 	sudo python3 get-pip.py
@@ -66,7 +66,7 @@ if [ -e /usr/bin/apt ]; then
 fi
 if [ -e /usr/bin/pacmann ]; then
 	#this requeires the multilib repo to be enabled
-	sudo pacman -S --no-confirm base-devel ccahe git ncurses lib32-ncurses libstdc++5 gtk2 lib32-gtk2 lib32-pango lib32-libidn11  jdk8-openjdk unzip zlib lib32-zlib lib32-libltdl libffi openssl autoconf cmake
+	sudo pacman -S --noconfirm base-devel ccahe git ncurses lib32-ncurses libstdc++5 gtk2 lib32-gtk2 lib32-pango lib32-libidn11  jdk8-openjdk unzip zlib lib32-zlib lib32-libltdl libffi openssl autoconf cmake
 fi
 # Install Buildozer
 git clone https://github.com/kivy/buildozer.git
