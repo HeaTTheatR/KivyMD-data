@@ -51,11 +51,17 @@ sudo apt install -y \
     libltdl-dev \
     libffi-dev \
     libssl-dev \
+    automake \
     autoconf \
-    autotools-dev
+    autotools-dev \
+    pkgconf \
+    libtool \
     cmake
 
 # Install Buildozer
+mkdir ~/buildozer-repo
+cd ~/buildozer-repo
+
 git clone https://github.com/kivy/buildozer.git
 cd buildozer
 sudo python3 setup.py install
